@@ -2,6 +2,7 @@
 Description=tinyproxy startup
 
 [Service]
+# change these according to your tinyproxy configuration
 ExecStartPre=mkdir -p /var/run/tinyproxy
 ExecStartPre=touch /var/log/tinyproxy.log
 ExecStartPre=chown tinyproxy:tinyproxy /var/run/tinyproxy /var/log/tinyproxy.log

@@ -1,3 +1,4 @@
+# change this according to your tinyproxy configuration
 /var/log/tinyproxy.log {
     missingok
     notifempty
