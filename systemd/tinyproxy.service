@@ -1,3 +1,8 @@
+# setup this file as /usr/lib/systemd/system/tinyproxy.service
+# then run
+#	systemctl enable tinyproxy
+#	systemctl start tinyproxy
+
 [Unit]
 Description=tinyproxy startup
 

@@ -1,3 +1,5 @@
+# setup this file as /etc/logrotate.d/tinyproxy
+
 # change this according to your tinyproxy configuration
 /var/log/tinyproxy.log {
     missingok
