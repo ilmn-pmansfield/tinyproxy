@@ -1,0 +1,15 @@
+[Unit]
+Description=tinyproxy startup
+
+[Service]
+ExecStartPre=mkdir -p /var/run/tinyproxy
+ExecStartPre=touch /var/log/tinyproxy.log
+ExecStartPre=chown tinyproxy:tinyproxy /var/run/tinyproxy /var/log/tinyproxy.log
+ExecStart=/opt/tinyproxy/bin/tinyproxy
+ExecReload=/bin/kill -HUP $MAINPID
+#User=tinyproxy
+PIDFile=/var/run/tinyproxy/tinyproxy.pid
+Type=forking
+
+[Install]
+WantedBy=multi-user.target
